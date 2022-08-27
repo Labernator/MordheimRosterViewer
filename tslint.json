@@ -17,6 +17,7 @@
                 "check-space"
             ]
         },
+        "import/no-webpack-loader-syntax": "off",
         "member-access": true,
         "only-arrow-functions": {
             "options": [

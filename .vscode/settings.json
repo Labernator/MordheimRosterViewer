@@ -13,7 +13,7 @@
             "source.organizeImports": true
         }
     },
-    "tslint.configFile": "C:\\Users\\D037083\\Private\\Github\\Stargrave\\tslint.json",
+    "tslint.configFile": "C:\\Users\\D037083\\Private\\Github\\MordheimCampaignTracker\\tslint.json",
     "typescript.preferences.importModuleSpecifierEnding": "minimal",
     "typescript.tsdk": "node_modules\\typescript\\lib"
 }
