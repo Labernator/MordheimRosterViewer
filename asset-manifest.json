@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/MordheimRosterViewer/static/css/main.b19ecb32.chunk.css",
+    "main.js": "/MordheimRosterViewer/static/js/main.64f1e02c.chunk.js",
+    "main.js.map": "/MordheimRosterViewer/static/js/main.64f1e02c.chunk.js.map",
+    "runtime-main.js": "/MordheimRosterViewer/static/js/runtime-main.1e3e8210.js",
+    "runtime-main.js.map": "/MordheimRosterViewer/static/js/runtime-main.1e3e8210.js.map",
+    "static/js/2.a48add6a.chunk.js": "/MordheimRosterViewer/static/js/2.a48add6a.chunk.js",
+    "static/js/2.a48add6a.chunk.js.map": "/MordheimRosterViewer/static/js/2.a48add6a.chunk.js.map",
+    "static/js/3.ee582a9a.chunk.js": "/MordheimRosterViewer/static/js/3.ee582a9a.chunk.js",
+    "static/js/3.ee582a9a.chunk.js.map": "/MordheimRosterViewer/static/js/3.ee582a9a.chunk.js.map",
+    "static/js/4.a36aed2c.chunk.js": "/MordheimRosterViewer/static/js/4.a36aed2c.chunk.js",
+    "static/js/4.a36aed2c.chunk.js.map": "/MordheimRosterViewer/static/js/4.a36aed2c.chunk.js.map",
+    "index.html": "/MordheimRosterViewer/index.html",
+    "static/css/main.b19ecb32.chunk.css.map": "/MordheimRosterViewer/static/css/main.b19ecb32.chunk.css.map",
+    "static/js/2.a48add6a.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/2.a48add6a.chunk.js.LICENSE.txt",
+    "static/js/3.ee582a9a.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/3.ee582a9a.chunk.js.LICENSE.txt",
+    "static/js/4.a36aed2c.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/4.a36aed2c.chunk.js.LICENSE.txt",
+    "static/media/Completed.7ca392ee.png": "/MordheimRosterViewer/static/media/Completed.7ca392ee.png",
+    "static/media/ImportCrew.e5abae4c.png": "/MordheimRosterViewer/static/media/ImportCrew.e5abae4c.png",
+    "static/media/Loading.382232d0.png": "/MordheimRosterViewer/static/media/Loading.382232d0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e3e8210.js",
+    "static/js/3.ee582a9a.chunk.js",
+    "static/css/main.b19ecb32.chunk.css",
+    "static/js/main.64f1e02c.chunk.js"
+  ]
+}
