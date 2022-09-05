@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { compose, createStore } from "redux";
 import "./App.css";
 import { LandingPage } from "./pages";
-import { RosterPage } from "./pages/Overview/RosterPage";
+import { PdfCreationPage } from "./pages/Overview/PdfCreationPage";
 import "./pages/Page.css";
 import { stateReducer } from "./redux/reducer";
 
@@ -13,7 +13,7 @@ const App = () =>
   <BrowserRouter>
     <div className="app-body">
       <Switch>
-        <Route path="/WarbandViewer" component={RosterPage} />
+        <Route path="/PdfExport" component={PdfCreationPage} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </div>

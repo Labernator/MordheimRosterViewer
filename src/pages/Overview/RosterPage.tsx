@@ -1,24 +1,29 @@
-import React, { useContext } from "react";
-import { ReactReduxContext } from "react-redux";
-import { HeroEntityItem } from "../../components/HeroItem";
-import { RosterHeader } from "../../components/RosterHeader";
-import { WarbandState } from "../../data/Interfaces";
+
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { PDFLayout } from "../../components/PdfLayout";
 
 export const RosterPage = () => {
-    const { store } = useContext(ReactReduxContext);
-    const state = store.getState() as WarbandState;
-
+    const history = useHistory();
+    const exportPdf = async () => {
+        const jsPdf = new jsPDF("portrait", "mm", "a4", true);
+        let canvas: HTMLCanvasElement;
+        const container = Array.from(document.querySelectorAll(".pdf-container"));
+        canvas = await html2canvas(container[0] as unknown as HTMLElement, { scale: 4 });
+        jsPdf.addImage(canvas.toDataURL("image/png"), "JPEG", 0, 0, jsPdf.internal.pageSize.getWidth(), jsPdf.internal.pageSize.getHeight());
+        jsPdf.save("RosterViewer.pdf");
+    };
     return <React.Fragment>
-        {state.warband ?
-            <div className="flex-container" >
-                <div className="large-header">Warband Roster</div>
-                <RosterHeader header={"Warband Name"} text={state.warband} />
-                <RosterHeader header={"Gold Coins"} text={state.gc} />
-                <RosterHeader header={"Wyrdstone Shards"} text={state.shards} />
-                <div key="crewRoster" id="crewRoster" style={{ paddingTop: "0.5rem" }}>
-                    {state.heros?.map((hero) => <HeroEntityItem hero={hero} />)}
-                </div>
-            </div> : null
-        }
+        <div
+            className="back-btn"
+            onClick={async () => exportPdf()}
+        >Generate Pdf</div>
+        <div
+            className="back-btn"
+            onClick={() => history.goBack()}
+        >Back</div>
+        <PDFLayout />
     </React.Fragment>;
 };

@@ -1,50 +1,32 @@
-// import doc from "js-yaml-loader!../../data/Beastmen/beastmen.mordheim.post1.yml";
+import * as yaml from "js-yaml";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import * as Beastmen from "../../data/Beastmen/beastmen.mordheim.post1.json";
-import { WarbandState } from "../../data/Interfaces";
-import * as Skaven from "../../data/Skaven/deadguard-skaven.mordheim.json";
-import * as Vampires from "../../data/Vampires/vampires.mordheim.json";
-import { BeastmenImg, SkavenImg, VampiresImg } from "../../images/index";
 import { SET_WARBAND } from "../../redux/actions";
-
+import ImportCrewPng from "./../../images/ImportCrew.png";
 export const LandingPage = () => {
 
     const history = useHistory();
     const dispatch = useDispatch();
 
     return <div className="flex-container" style={{ textAlign: "center" }}>
-        <div className="large-header">Warband Selection</div>
-        <div
-            className="tile"
-            onClick={() => {
-                // const file = fs.readFileSync("../../data/Beastmen/beastmen.mordheim.post1.yml", "utf8");
-                // const doc = load(file);
-                // tslint:disable-next-line: no-console
-                // console.log(doc);
-                dispatch({ type: SET_WARBAND, payload: (Beastmen as any).default as WarbandState });
-                history.push("/WarbandViewer");
-            }}>
-            <div className="large-header">{Beastmen.warband}</div>
-            <img alt="SampleWarband" style={{ width: "35%" }} src={BeastmenImg} />
-        </div>
-        <div
-            className="tile"
-            onClick={() => {
-                dispatch({ type: SET_WARBAND, payload: (Skaven as any).default as WarbandState });
-                history.push("/WarbandViewer");
-            }}>
-            <div className="large-header">{Skaven.warband}</div>
-            <img alt="SampleWarband" style={{ width: "35%" }} src={SkavenImg} />
-        </div>
-        <div
-            className="tile"
-            onClick={() => {
-                dispatch({ type: SET_WARBAND, payload: (Vampires as any).default as WarbandState });
-                history.push("/WarbandViewer");
-            }}>
-            <div className="large-header">{Vampires.warband}</div>
-            <img alt="SampleWarband" style={{ width: "35%" }} src={VampiresImg} />
-        </div>
-    </div >;
+        <label htmlFor="file-uploader" className="flex-container">
+            <input
+                id="file-uploader"
+                type="file"
+                accept=".yml"
+                style={{ display: "none" }}
+                onChange={() => {
+                    const reader = new FileReader();
+                    reader.onload = (ev: ProgressEvent<FileReader>) => {
+                        const jsobject = yaml.load(ev.target?.result as string);
+                        dispatch({ type: SET_WARBAND, payload: jsobject });
+                        history.push("/PdfExport");
+                    };
+                    reader.readAsText((document.querySelector("#file-uploader") as HTMLInputElement)?.files?.item(0) as File);
+                }}
+            />
+            <img style={{ margin: "5rem 1rem" }} src={ImportCrewPng}></img>
+            <div className="large-header" onClick={() => document.getElementById("file-uploader")?.click()}>Tap here to load your .yml file and get a nice pdf for it</div>
+        </label>
+    </div>;
 };
