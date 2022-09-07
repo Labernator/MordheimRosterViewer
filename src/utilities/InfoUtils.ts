@@ -42,6 +42,9 @@ export const findSkills = (units: Array<HerosEntity | HenchmenEntity>): Array<Sp
             }, [] as SpellsEntity[]);
             return [...acc, ...mappedSpells];
         }
+        if (rule.indexOf("Hatred") !== -1) {
+            return [...acc, AllSkills.find((skill) => skill.name === "Hatred") as SkillsEntity];
+        }
         return acc;
     }, [] as Array<SpellsEntity | SkillsEntity>);
     console.log(skills);

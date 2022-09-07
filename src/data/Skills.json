@@ -614,6 +614,12 @@
             "type": "Skaven",
             "text": "Armour Penetration +1 (both shooting and melee)"
 
+        },
+        {
+            "name": "Hatred",
+            "type": "Generic",
+            "text": "The model hates another model, warband or race. When fighting in melee with a model that falls in the hated category, this model may re-roll all failed to hit rolls."
+
         }
     ]
 }
