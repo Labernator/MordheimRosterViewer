@@ -1,18 +1,16 @@
 
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
-import React, { useContext, useEffect, useState } from "react";
-import { ReactReduxContext } from "react-redux";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { PDFInfoPage, PDFLayout } from "../../components/PdfLayout";
-import { WarbandState } from "../../data/Interfaces";
-import CompletedPng from "./../../images/Completed.png";
-import LoadingPng from "./../../images/Loading.png";
+import { PdfInfoPage, PdfRoster } from "../components";
+import "../css/Pdf.css";
+import { CompletedPng, LoadingPng } from "../images";
+import { WarbandState } from "../utilities/Interfaces";
 
 export const PdfCreationPage = () => {
     const history = useHistory();
-    const { store } = useContext(ReactReduxContext);
-    const state = store.getState() as WarbandState;
+    const state = history.location.state as WarbandState;
     const exportPdf = async () => {
         const jsPdf = new jsPDF("portrait", "mm", "a4", true);
         let canvas: HTMLCanvasElement;
@@ -20,7 +18,6 @@ export const PdfCreationPage = () => {
         jsPdf.addImage(canvas.toDataURL("image/png"), "JPEG", 0, 0, jsPdf.internal.pageSize.getWidth(), jsPdf.internal.pageSize.getHeight());
 
         jsPdf.addPage();
-
         canvas = await html2canvas(document.querySelector("#pdf-info-page") as HTMLElement, { scale: 4 });
         jsPdf.addImage(canvas.toDataURL("image/png"), "JPEG", 0, 0, jsPdf.internal.pageSize.getWidth(), jsPdf.internal.pageSize.getHeight());
         jsPdf.save(`${state.warband}.pdf`);
@@ -35,34 +32,26 @@ export const PdfCreationPage = () => {
         return () => {
             // this now gets called when the component unmounts
         };
-    }, []);
-    return <React.Fragment>{
-        showSuccess ?
+    });
+    return <React.Fragment>
+        {showSuccess ?
             <React.Fragment>
-                <img src={CompletedPng} style={{ margin: "5rem 3rem", width: "75%" }} ></img>
-                <div
-                    className="large-header"
-                >Enjoy your pdf</div>
+                <img src={CompletedPng} style={{ margin: "5rem 3rem", width: "75%" }} alt="Complete Icon"></img>
+                <div className="large-header">Enjoy your pdf</div>
                 <div
                     className="back-btn"
                     onClick={() => history.goBack()}
-                >Back</div></React.Fragment> : <React.Fragment>
-                <img src={LoadingPng} style={{ margin: "5rem 3rem", width: "75%" }} ></img>
-                <div
-                    className="large-header"
-                >Please be patient. </div>
-                <div
-                    className="large-header"
-                >The Snotlings are painting your pdf right now.</div>
-                <div
-                    className="large-header"
-                >They are almost done.</div>
-                <div
-                    className="large-header"
-                >Hang on...</div>
+                >Back</div>
+            </React.Fragment> :
+            <React.Fragment>
+                <img src={LoadingPng} style={{ margin: "5rem 3rem", width: "75%" }} alt="Loading Icon"></img>
+                <div className="large-header">Please be patient. </div>
+                <div className="large-header">The Snotlings are painting your pdf right now.</div>
+                <div className="large-header">They are almost done.</div>
+                <div className="large-header">Hang on...</div>
             </React.Fragment>
-    }
-        <PDFLayout />
-        <PDFInfoPage />
+        }
+        <PdfRoster state={state} />
+        <PdfInfoPage state={state} />
     </React.Fragment>;
 };

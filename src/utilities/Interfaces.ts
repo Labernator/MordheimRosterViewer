@@ -9,6 +9,7 @@ export interface WarbandState {
     henchmen?: HenchmenEntity[];
     notes?: string;
 }
+
 export interface HerosEntity {
     hero: string;
     stats: string;
@@ -17,6 +18,7 @@ export interface HerosEntity {
     rules?: string;
     skilllists: string;
 }
+
 export interface HenchmenEntity {
     group: string;
     stats: string;
@@ -25,7 +27,6 @@ export interface HenchmenEntity {
     rules?: string;
 }
 
-export const isHero = (unit: HenchmenEntity | HerosEntity): unit is HerosEntity => (unit as HerosEntity).hero !== undefined;
 export interface Stats {
     M: number;
     WS: number;
@@ -38,12 +39,14 @@ export interface Stats {
     LD: number;
     Sv: string;
 }
+
 export interface SkillsEntity {
     name: string;
     type: string;
     text: string;
     prerequisite?: Prerequisite;
 }
+
 export interface Prerequisite {
     type: string;
     condition: number | string;
@@ -56,8 +59,6 @@ export interface SpellsEntity {
     castingCost: string;
     text: string;
 }
-
-export const isSpell = (skillOrSpell: SkillsEntity | SpellsEntity): skillOrSpell is SpellsEntity => (skillOrSpell as SpellsEntity).castingCost !== undefined;
 
 export interface EquipmentEntity {
     MeleeWeapons?: MeleeWeaponsEntity[];
@@ -102,12 +103,15 @@ export interface MiscallaneousEntity {
     text?: string;
 }
 
-export const isArmour = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is ArmourEntity => (equipment as ArmourEntity).armourType !== undefined;
-export const isMisc = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MiscallaneousEntity => (equipment as MiscallaneousEntity).genus !== undefined;
-export const isMelee = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MeleeWeaponsEntity => (equipment as MeleeWeaponsEntity).strengthModifier !== undefined;
-export const isMissile = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MissileWeaponsEntity => (equipment as MissileWeaponsEntity).range !== undefined;
-
 export interface EquipmentRulesEntity {
     name: string;
     text: string;
 }
+
+// Type guards
+export const isHero = (unit: HenchmenEntity | HerosEntity): unit is HerosEntity => (unit as HerosEntity).hero !== undefined;
+export const isSpell = (skillOrSpell: SkillsEntity | SpellsEntity): skillOrSpell is SpellsEntity => (skillOrSpell as SpellsEntity).castingCost !== undefined;
+export const isArmour = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is ArmourEntity => (equipment as ArmourEntity).armourType !== undefined;
+export const isMisc = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MiscallaneousEntity => (equipment as MiscallaneousEntity).genus !== undefined;
+export const isMelee = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MeleeWeaponsEntity => (equipment as MeleeWeaponsEntity).strengthModifier !== undefined;
+export const isMissile = (equipment: ArmourEntity | MiscallaneousEntity | MissileWeaponsEntity | MeleeWeaponsEntity): equipment is MissileWeaponsEntity => (equipment as MissileWeaponsEntity).range !== undefined;
