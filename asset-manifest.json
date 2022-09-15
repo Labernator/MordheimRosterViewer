@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/MordheimRosterViewer/static/css/main.6cde5d44.chunk.css",
-    "main.js": "/MordheimRosterViewer/static/js/main.996c805c.chunk.js",
-    "main.js.map": "/MordheimRosterViewer/static/js/main.996c805c.chunk.js.map",
-    "runtime-main.js": "/MordheimRosterViewer/static/js/runtime-main.cb7fae44.js",
-    "runtime-main.js.map": "/MordheimRosterViewer/static/js/runtime-main.cb7fae44.js.map",
-    "static/js/2.b67ce67a.chunk.js": "/MordheimRosterViewer/static/js/2.b67ce67a.chunk.js",
-    "static/js/2.b67ce67a.chunk.js.map": "/MordheimRosterViewer/static/js/2.b67ce67a.chunk.js.map",
-    "static/js/3.b6bf60ab.chunk.js": "/MordheimRosterViewer/static/js/3.b6bf60ab.chunk.js",
-    "static/js/3.b6bf60ab.chunk.js.map": "/MordheimRosterViewer/static/js/3.b6bf60ab.chunk.js.map",
-    "static/js/4.dec9a676.chunk.js": "/MordheimRosterViewer/static/js/4.dec9a676.chunk.js",
-    "static/js/4.dec9a676.chunk.js.map": "/MordheimRosterViewer/static/js/4.dec9a676.chunk.js.map",
+    "main.css": "/MordheimRosterViewer/static/css/main.820c24db.chunk.css",
+    "main.js": "/MordheimRosterViewer/static/js/main.acbb1d5c.chunk.js",
+    "main.js.map": "/MordheimRosterViewer/static/js/main.acbb1d5c.chunk.js.map",
+    "runtime-main.js": "/MordheimRosterViewer/static/js/runtime-main.0b7d9ac5.js",
+    "runtime-main.js.map": "/MordheimRosterViewer/static/js/runtime-main.0b7d9ac5.js.map",
+    "static/js/2.d8e26adc.chunk.js": "/MordheimRosterViewer/static/js/2.d8e26adc.chunk.js",
+    "static/js/2.d8e26adc.chunk.js.map": "/MordheimRosterViewer/static/js/2.d8e26adc.chunk.js.map",
+    "static/js/3.8c665f5d.chunk.js": "/MordheimRosterViewer/static/js/3.8c665f5d.chunk.js",
+    "static/js/3.8c665f5d.chunk.js.map": "/MordheimRosterViewer/static/js/3.8c665f5d.chunk.js.map",
+    "static/js/4.be417897.chunk.js": "/MordheimRosterViewer/static/js/4.be417897.chunk.js",
+    "static/js/4.be417897.chunk.js.map": "/MordheimRosterViewer/static/js/4.be417897.chunk.js.map",
     "index.html": "/MordheimRosterViewer/index.html",
-    "static/css/main.6cde5d44.chunk.css.map": "/MordheimRosterViewer/static/css/main.6cde5d44.chunk.css.map",
-    "static/js/2.b67ce67a.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/2.b67ce67a.chunk.js.LICENSE.txt",
-    "static/js/3.b6bf60ab.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/3.b6bf60ab.chunk.js.LICENSE.txt",
-    "static/js/4.dec9a676.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/4.dec9a676.chunk.js.LICENSE.txt",
+    "static/css/main.820c24db.chunk.css.map": "/MordheimRosterViewer/static/css/main.820c24db.chunk.css.map",
+    "static/js/2.d8e26adc.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/2.d8e26adc.chunk.js.LICENSE.txt",
+    "static/js/3.8c665f5d.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/3.8c665f5d.chunk.js.LICENSE.txt",
+    "static/js/4.be417897.chunk.js.LICENSE.txt": "/MordheimRosterViewer/static/js/4.be417897.chunk.js.LICENSE.txt",
     "static/media/Completed.7ca392ee.png": "/MordheimRosterViewer/static/media/Completed.7ca392ee.png",
     "static/media/ImportCrew.e5abae4c.png": "/MordheimRosterViewer/static/media/ImportCrew.e5abae4c.png",
     "static/media/Loading.382232d0.png": "/MordheimRosterViewer/static/media/Loading.382232d0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.cb7fae44.js",
-    "static/js/3.b6bf60ab.chunk.js",
-    "static/css/main.6cde5d44.chunk.css",
-    "static/js/main.996c805c.chunk.js"
+    "static/js/runtime-main.0b7d9ac5.js",
+    "static/js/3.8c665f5d.chunk.js",
+    "static/css/main.820c24db.chunk.css",
+    "static/js/main.acbb1d5c.chunk.js"
   ]
 }
