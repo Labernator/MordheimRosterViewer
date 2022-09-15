@@ -22,7 +22,7 @@ code {
 .app-body {
   height: calc(100vh);
   /* width: calc(100vw - 2rem); */
-  font-family: Montserrat;
+  font-family: Lucida Calligraphy;
   position: relative;
   background-color: var(--background-color);
   color: var(--black-color);
@@ -63,4 +63,10 @@ code {
   display: flex;
   margin-left: 1rem;
   justify-content: space-between;
+}
+
+.img-container {
+  margin: 5rem 3rem;
+  width: 75%;
+  max-width: 1000px
 }

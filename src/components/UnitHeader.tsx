@@ -12,7 +12,7 @@ export const UnitHeader = ({ Unit }: { Unit: HerosEntity | HenchmenEntity }) =>
             <div className="text-with-margins">{extractClass(Unit)}</div>
         </div>
         {isHero(Unit) ? <div style={{ display: "flex" }}>
-            <div className="bold-text-with-margins">Level: </div>
+            <div className="bold-text-with-margins">Experience: </div>
             <div className="text-with-margins">{`${extractExperience(Unit)} [ +${getNextLevelUp(extractExperience(Unit)) - extractExperience(Unit)} ]`}</div>
         </div> : <div></div>}
     </div>;

@@ -21,7 +21,7 @@ export const LandingPage = () => {
                     reader.readAsText((document.querySelector("#file-uploader") as HTMLInputElement)?.files?.item(0) as File);
                 }}
             />
-            <img style={{ margin: "5rem 1rem" }} src={ImportWarbandPng} alt="Import Icon"></img>
+            <img className="img-container" src={ImportWarbandPng} alt="Import Icon"></img>
             <div className="large-header" onClick={() => document.getElementById("file-uploader")?.click()}>Tap here to load your .yml file and get a nice pdf for it</div>
         </label>
     </div>;

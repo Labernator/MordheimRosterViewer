@@ -11,7 +11,7 @@ export const PdfInfoPage = ({ state }: { state: WarbandState }) => {
     const skills = findSkills(units).filter((entity) => entity && !isSpell(entity)) as SkillsEntity[];
     const equipment = findEquipment(units);
     return <React.Fragment>
-        <div className="pdf-container" id="pdf-info-page">
+        <div className="pdf-container" id="pdf-info-page" style={{ top: "-10000px" }}>
             <WarbandHeader warband={state} />
             <div className="unit-container">
                 <NotesSection notes={state.notes} />

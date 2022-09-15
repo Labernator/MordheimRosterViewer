@@ -14,7 +14,7 @@ export const StatsAndEquipmentSection = ({ Unit }: { Unit: HerosEntity | Henchme
     const ArmourPart = () => {
         const armour = Unit.armour;
         return armour ? <div style={{ display: "flex", flexDirection: "column" }}>
-            <div className="bold-text-with-margins">Armour: </div>
+            <div className="bold-text-with-margins">Armour:</div>
             <div className="text-with-margins">{armour}</div>
         </div> : <React.Fragment />;
     };

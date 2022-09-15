@@ -18,7 +18,7 @@ export const PdfRoster = ({ state }: { state: WarbandState }) => {
                     <StatsAndEquipmentSection Unit={unit} />
                     <RulesSection Unit={unit} />
                 </div>)}
-            <div style={{ marginLeft: "1rem" }}>* the [ +* ] notation behind the level states how many level ups you need to gain an advance</div>
+            <div style={{ marginLeft: "1rem" }}>* the [ +* ] notation behind the experience states how many xp you need to gain the next advance</div>
         </div>
 
     </React.Fragment>;

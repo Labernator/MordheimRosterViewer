@@ -32,11 +32,11 @@ export const PdfCreationPage = () => {
         return () => {
             // this now gets called when the component unmounts
         };
-    });
+    }, []);
     return <React.Fragment>
         {showSuccess ?
             <React.Fragment>
-                <img src={CompletedPng} style={{ margin: "5rem 3rem", width: "75%" }} alt="Complete Icon"></img>
+                <img src={CompletedPng} className="img-container" alt="Complete Icon"></img>
                 <div className="large-header">Enjoy your pdf</div>
                 <div
                     className="back-btn"
@@ -44,7 +44,7 @@ export const PdfCreationPage = () => {
                 >Back</div>
             </React.Fragment> :
             <React.Fragment>
-                <img src={LoadingPng} style={{ margin: "5rem 3rem", width: "75%" }} alt="Loading Icon"></img>
+                <img src={LoadingPng} className="img-container" alt="Loading Icon"></img>
                 <div className="large-header">Please be patient. </div>
                 <div className="large-header">The Snotlings are painting your pdf right now.</div>
                 <div className="large-header">They are almost done.</div>
