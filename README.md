@@ -13,7 +13,7 @@ The structure of the yml file is outlined below.
 Examples are provided with every property.
 If you want to see real examples, then have a look at the test files  [test files](https://github.com/Labernator/MordheimRosterViewer/tree/master/src/data/testFiles) provided with this repo
 
-###Top level properties
+### Top level properties
 
 #### warband
 `Scourge of Sylvania (Undead)`
