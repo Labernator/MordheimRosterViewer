@@ -32,17 +32,17 @@ states the amount of gold coins your warband currently has in its treasury. The 
 states the amount of wyrdstone shards your warband currently has in its treasury. The value has to be an integer.
 
 
-####heros
+#### heros
 
 full description of every hero in your warband. Every hero is described using the following properties.
 
-#####hero
+##### hero
 `Isabella von Carstein (Vampire) [23XP]`
 
 Contains the name of the Hero, followed by its class and the current experience.
 The class is stated in round brackets, the experience is stated in square brackets. Experience is an integer value followed by the string <i>XP</i>
 
-#####stats
+##### stats
 `M5, WS4, BS4, S4, T4, W2, I5, A2, Ld8, Sv3+`
 
 Contains a value for all characteristics.
@@ -62,34 +62,34 @@ Valid Characteristics are:
 
 >Note: All characteristics have to be present. None may be omitted!
 
-#####weapons
+##### weapons
 `Crossbow, Hammer, Dagger`
 
 Contains all weapons the hero carries. The weapons are separated by comma. Can be used to describe special items as well.
-#####armour
+##### armour
 `Heavy Armour, Helmet, Rabbits Foot`
 
 Contains all armour pieces the hero carries. The armours are separated by comma. Can be used to describe special items as well.
-#####rules
+##### rules
 `Leader, Fearsome, Immune to Psychology, Immune to Poison, No Pain`
 
 Contains all rules the hero has to adhere to . The rules are separated by comma.
-#####skilllists
+##### skilllists
 `Strength, Academic, Combat, Speed`
 
 Contains all skill lists the hero may use. The skill lists are separated by comma.
 
-####henchmen
+#### henchmen
 
 full description of every henchmen group in your warband. Every henchmen group is described using the following properties.
 
-#####group
+##### group
 `True Believers (2 Flagellants) [0XP]`
 
 Contains the name of the group, followed by the number of henchmen in this group, its class and the current experience.
 The number of henchmen and the class are stated together in round brackets, the experience is stated in square brackets. Experience is an integer value followed by the string <i>XP</i>
 
-#####stats
+##### stats
 `M5, WS4, BS4, S4, T4, W2, I5, A2, Ld8, Sv3+`
 
 Contains a value for all characteristics.
@@ -109,15 +109,15 @@ Valid Characteristics are:
 
 >Note: All characteristics have to be present. None may be omitted!
 
-#####weapons
+##### weapons
 `Crossbow, Hammer, Dagger`
 
 Contains all weapons the henchmen carry. The weapons are separated by comma. Can be used to describe special items as well.
-#####armour
+##### armour
 `Heavy Armour, Helmet, Rabbits Foot`
 
 Contains all armour pieces the henchmen carry. The armours are separated by comma. Can be used to describe special items as well.
-#####rules
+##### rules
 `Leader, Fearsome, Immune to Psychology, Immune to Poison, No Pain`
 
 Contains all rules the henchmen have to adhere to . The rules are separated by comma.
