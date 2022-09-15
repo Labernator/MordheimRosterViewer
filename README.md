@@ -1,15 +1,19 @@
-# Getting Started with Mordheim Roster Viewer
+# Getting Started with Mordheim Pdf Generator
 
+You can open the pdf generator here:
 https://labernator.github.io/MordheimRosterViewer
 
-# How to use
+Simply upload a .yml file and it will generate a nice .pdf file you for printing.
 
-You will need a .yml file.
+# What kind of fresh hell is this yaml/yml stuff you talk about?
+
+You will need a .yml file to use the generator.
 
 The structure of the yml file is outlined below.
 Examples are provided with every property.
+If you want to see real examples, then have a look at the test files  [test files](https://github.com/Labernator/MordheimRosterViewer/tree/master/src/data/testFiles) provided with this repo
 
-Top level properties
+###Top level properties
 
 #### warband
 `Scourge of Sylvania (Undead)`

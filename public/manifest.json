@@ -1,6 +1,6 @@
 {
   "short_name": "MordheimRosterViewer",
-  "name": "Mordheim Roster Viewer",
+  "name": "Mordheim Pdf Generator",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
